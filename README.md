@@ -116,3 +116,11 @@ Durante el desarrollo de este proyecto se trabajó con:
 ## Estado
 
 Proyecto finalizado y desplegado en producción.
+
+---
+## Install
+1. Clonar el repositorio.
+2. Copiar .env.example a .env.
+3. Completar las variables de entorno.
+4. Instalar dependencias.
+5. Ejecutar npm run dev.

@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: "*"
+  origin: process.env.FRONTEND_URL
 }));
 
 app.use('/tareas', tareaRoutes);
@@ -20,6 +20,7 @@ app.use('/tareas', tareaRoutes);
 app.get('/', (req, res) => {
   res.send('Servidor funcionando');
 });
+
 app.use("/auth", authRoutes);
 app.use(errorHandler);
 
