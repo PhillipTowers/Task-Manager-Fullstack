@@ -24,7 +24,7 @@ export const authMiddleware = (
 
     const token = authHeader.split(" ")[1]; // Bearer TOKEN
 
-    const decoded = jwt.verify(token, "secret123") as JwtPayload;
+    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as JwtPayload;
 
     req.userId = decoded.userId;
 
